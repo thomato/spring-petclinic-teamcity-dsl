@@ -21,6 +21,7 @@ changeBuildType(RelativeId("Build")) {
     steps {
         update<MavenBuildStep>(0) {
             clearConditions()
+            mavenVersion = auto()
             dockerImage = "maven:3.8.4"
         }
     }
