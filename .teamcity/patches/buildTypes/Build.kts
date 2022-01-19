@@ -22,6 +22,7 @@ changeBuildType(RelativeId("Build")) {
         update<MavenBuildStep>(0) {
             clearConditions()
             mavenVersion = auto()
+            dockerImagePlatform = MavenBuildStep.ImagePlatform.Linux
             dockerImage = "maven:3.8.4"
         }
     }
